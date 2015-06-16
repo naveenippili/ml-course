@@ -26,8 +26,7 @@ n = length(theta);
 vl = ones (length(theta), 1) * lambda/m;
 vl(1) = 0;
 
-J = ((1/m) * (- y' * log(hx) - (1-y') * log(1-hx)))
-			+ ((vl ./2)' * (theta .^ 2));
+J = ((1/m) * (- y' * log(hx) - (1-y') * log(1-hx))) + ((vl ./2)' * (theta .^ 2));
 
 grad = (1/m) * ((hx - y)' * X)' + vl .* theta;
 

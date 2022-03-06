@@ -21,13 +21,15 @@ p = zeros(size(X, 1), 1);
 %       can use max(A, [], 2) to obtain the max for each row.
 %
 
+a2 = computeLayer(Theta1, X);
+a3 = computeLayer(Theta2, a2);
 
 
 
 
 
 
-
+[predictions, p] = max(a3, [], 2);
 
 % =========================================================================
 
